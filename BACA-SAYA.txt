@@ -1,0 +1,75 @@
+==========================================================
+ PROGRAM UNGGULAN PROGRAMMING - SMK Plus Pelita Nusantara
+ Kode Default Pertemuan 1 : Pengenalan Proyek & Bootstrap
+ Data contoh              : toko kue "Dapur Manis" (rekaan)
+==========================================================
+
+A. CARA MEMBUKA
+----------------------------------------------------------
+1. Ekstrak (Extract All) file umkm-p1-default.zip.
+   Disarankan langsung ke C:\xampp\htdocs\ sehingga menjadi
+   C:\xampp\htdocs\umkm  (folder ini akan dipakai terus sampai
+   Pertemuan 14). Jika XAMPP belum ada, ekstrak ke Documents dulu.
+   Di sebelah folder umkm ada file panduan-praktik-p1.html.
+2. Klik dua kali panduan-praktik-p1.html (buka dengan Chrome/Edge).
+   Itu panduan kerja hari ini: centang setiap langkah yang selesai,
+   progres tersimpan otomatis di browser.
+3. Buka Visual Studio Code > File > Open Folder > pilih folder umkm.
+4. Pasang ekstensi "Live Server" (sekali saja).
+5. Klik kanan index.html > "Open with Live Server".
+   Setiap kali file disimpan (Ctrl+S), browser otomatis memuat ulang.
+   Cara lain: klik dua kali index.html (tanpa auto-reload).
+
+PENTING: Bootstrap dimuat dari internet (CDN).
+Jika laptop tidak terhubung internet, tampilan menjadi polos.
+
+B. ISI FOLDER
+----------------------------------------------------------
+umkm/
+  index.html              halaman beranda (SATU-SATUNYA halaman di P1)
+  BACA-SAYA.txt           file ini
+  assets/
+    css/style.css         CSS tambahan milik kita sendiri
+    img/logo/             logo UMKM          (logo-dapur-manis.png)
+    img/banner/           gambar hero 16:9   (banner-kue.jpg)
+    img/produk/           foto produk 1:1    (6 file .jpg)
+
+Semua gambar di atas adalah GAMBAR CONTOH. Ganti dengan gambar
+UMKM pilihanmu.
+
+C. BAGIAN YANG KAMU UBAH (cari tulisan "UBAH:" dengan Ctrl+F)
+----------------------------------------------------------
+index.html
+  - <title>                     nama UMKM di tab browser   (Target a)
+  - Navbar                      logo, nama toko            (Target a, b)
+  - Navbar                      dibuat responsif/hamburger (Target c)
+  - Hero                        nama toko + tagline        (Target a)
+  - 6 card produk               foto, nama, harga, badge   (Target a, b, d)
+  - Grid produk (col-4)         3 / 2 / 1 kolom            (Target e)
+  - Footer                      nama, alamat, tahun, sumber foto (Target f)
+assets/css/style.css
+  - .hero                       nama file banner (opsional)
+  - Warna tema                  (Tantangan)
+
+D. ATURAN GAMBAR
+----------------------------------------------------------
+- Nama file huruf kecil, tanpa spasi. Contoh: keripik-pedas.jpg
+  (BUKAN "Keripik Pedas.JPG")
+- Ukuran di bawah 500 KB per gambar.
+- Foto produk persegi (rasio 1:1). Banner lebar (16:9) tanpa teks.
+- Format: jpg / png / webp.
+- Sumber: foto asli UMKM, atau Unsplash / Pexels / Pixabay.
+  Jangan ambil sembarangan dari Google Images.
+
+E. DI AKHIR PERTEMUAN
+----------------------------------------------------------
+1. Simpan versi: salin folder umkm, beri nama umkm-p1.
+2. Kumpulkan P1_NamaSiswa.zip (contoh: P1_Rina.zip) berisi:
+   - folder proyek (umkm-p1)
+   - screenshot tampilan laptop  (laptop.png)
+   - screenshot tampilan HP      (hp.png)
+   Gunakan .zip, bukan .rar.
+
+F. PERUBAHAN DIBANDING PERTEMUAN SEBELUMNYA
+----------------------------------------------------------
+Ini pertemuan pertama: semua file baru.

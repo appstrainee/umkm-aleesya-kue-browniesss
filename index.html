@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- KUNCI GURU (umkm-p1): semua target wajib a-f + 3 tantangan sudah dikerjakan dengan data Dapur Manis. JANGAN dibagikan ke siswa. -->
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- UBAH: judul tab browser, ganti dengan nama UMKM pilihanmu -->
+    <title>Dapur Manis - Kue Rumahan Cibinong</title>
+
+    <!-- 1) CSS Bootstrap (dari internet/CDN): mengatur TAMPILAN semua class Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Tantangan 2: Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- 2) CSS milik kita sendiri. Dipasang SETELAH Bootstrap agar bisa menimpa gaya Bootstrap -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <!-- UBAH (Target c): navbar ini BELUM responsif.
+         - "navbar-expand" membuat menu selalu terbuka, sehingga di HP menu berdesakan.
+         - Tugasmu: ganti menjadi navbar-expand-lg, tambahkan tombol hamburger (navbar-toggler),
+           lalu bungkus <ul> menu dengan <div class="collapse navbar-collapse" id="...">.
+         - Lihat contohnya di dokumentasi: getbootstrap.com > Docs > Components > Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+        <div class="container">
+
+            <!-- UBAH (Target a & b): logo dan nama toko -->
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#beranda">
+                <img src="assets/img/logo/logo-dapur-manis.png" alt="Logo Dapur Manis" width="40" height="40">
+                Dapur Manis
+            </a>
+
+            <!-- Target c: tombol hamburger, hanya muncul di layar kecil -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-utama"
+                    aria-controls="menu-utama" aria-expanded="false" aria-label="Buka menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Target c: menu dibungkus collapse; id harus SAMA dengan data-bs-target -->
+            <div class="collapse navbar-collapse" id="menu-utama">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produk">Produk Kami</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- ================= HERO / BANNER ================= -->
+    <!-- Gambar banner dipasang lewat CSS (lihat .hero di assets/css/style.css).
+         Nama toko, tagline, dan tombol ditulis dengan HTML, BUKAN di dalam gambar. -->
+    <section id="beranda" class="hero d-flex align-items-center text-white">
+        <div class="container text-center">
+            <!-- UBAH (Target a): nama toko dan tagline -->
+            <h1 class="display-4 fw-bold">Dapur Manis</h1>
+            <p class="lead mb-4">Kue rumahan, dibuat setiap hari dengan sepenuh hati</p>
+            <a href="#produk" class="btn btn-light btn-lg">Lihat Produk</a>
+        </div>
+    </section>
+
+    <!-- ================= PRODUK UNGGULAN ================= -->
+    <section id="produk" class="py-5">
+        <div class="container">
+
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Produk Unggulan</h2>
+                <!-- UBAH (Target a): kalimat pengantar produk -->
+                <p class="text-muted">Kue kering, kue basah, dan bolu buatan rumah, tanpa pengawet.</p>
+            </div>
+
+            <!-- UBAH (Target e): grid produk.
+                 Sekarang setiap card memakai "col-4" = selalu 3 kolom, di layar apa pun (di HP jadi sempit).
+                 Tugasmu: 3 kolom di laptop, 2 kolom di tablet, 1 kolom di HP. -->
+            <div class="row g-4">
+
+                <!-- PRODUK 1 -->
+                <!-- UBAH (Target a, b, d): foto, kategori, nama, harga, satuan; tambahkan badge di minimal 2 produk -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <span class="badge text-bg-danger position-absolute top-0 start-0 m-2">Terlaris</span>
+                        <img src="assets/img/produk/nastar-keju.jpg" class="card-img-top foto-produk" alt="Nastar Keju">
+                        <div class="card-body">
+                            <p class="text-muted small mb-1">Kue Kering</p>
+                            <h5 class="card-title">Nastar Keju</h5>
+                            <p class="card-text fw-bold mb-0">Rp85.000 <span class="fw-normal text-muted">/ toples</span></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <a href="#" class="btn btn-tema w-100">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 2 -->
+                <!-- UBAH (Target a, b, d) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/produk/kastengel.jpg" class="card-img-top foto-produk" alt="Kastengel">
+                        <div class="card-body">
+                            <p class="text-muted small mb-1">Kue Kering</p>
+                            <h5 class="card-title">Kastengel</h5>
+                            <p class="card-text fw-bold mb-0">Rp90.000 <span class="fw-normal text-muted">/ toples</span></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <a href="#" class="btn btn-tema w-100">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 3 -->
+                <!-- UBAH (Target a, b, d) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/produk/putri-salju.jpg" class="card-img-top foto-produk" alt="Putri Salju">
+                        <div class="card-body">
+                            <p class="text-muted small mb-1">Kue Kering</p>
+                            <h5 class="card-title">Putri Salju</h5>
+                            <p class="card-text fw-bold mb-0">Rp75.000 <span class="fw-normal text-muted">/ toples</span></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <a href="#" class="btn btn-tema w-100">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 4 -->
+                <!-- UBAH (Target a, b, d) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <span class="badge text-bg-success position-absolute top-0 start-0 m-2">Baru</span>
+                        <img src="assets/img/produk/klepon.jpg" class="card-img-top foto-produk" alt="Klepon">
+                        <div class="card-body">
+                            <p class="text-muted small mb-1">Kue Basah</p>
+                            <h5 class="card-title">Klepon</h5>
+                            <p class="card-text fw-bold mb-0">Rp15.000 <span class="fw-normal text-muted">/ box</span></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <a href="#" class="btn btn-tema w-100">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 5 -->
+                <!-- UBAH (Target a, b, d) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/produk/bolu-pandan.jpg" class="card-img-top foto-produk" alt="Bolu Pandan">
+                        <div class="card-body">
+                            <p class="text-muted small mb-1">Bolu &amp; Cake</p>
+                            <h5 class="card-title">Bolu Pandan</h5>
+                            <p class="card-text fw-bold mb-0">Rp55.000 <span class="fw-normal text-muted">/ loyang</span></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <a href="#" class="btn btn-tema w-100">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUK 6 -->
+                <!-- UBAH (Target a, b, d) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="assets/img/produk/brownies-panggang.jpg" class="card-img-top foto-produk" alt="Brownies Panggang">
+                        <div class="card-body">
+                            <p class="text-muted small mb-1">Bolu &amp; Cake</p>
+                            <h5 class="card-title">Brownies Panggang</h5>
+                            <p class="card-text fw-bold mb-0">Rp60.000 <span class="fw-normal text-muted">/ loyang</span></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0 pb-3">
+                            <a href="#" class="btn btn-tema w-100">Detail</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <!-- UBAH (Target f): footer masih satu baris.
+         Lengkapi: nama toko, alamat, tahun, dan sumber foto (misalnya "Foto: Unsplash"). -->
+    <footer id="kontak" class="bg-tema text-white pt-4 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h5 class="fw-bold">Dapur Manis</h5>
+                    <p class="mb-0"><i class="bi bi-geo-alt"></i> Jl. Contoh No. 12, Cibinong, Kabupaten Bogor</p>
+                </div>
+                <div class="col-md-6 mb-3 text-md-end">
+                    <p class="mb-0"><i class="bi bi-whatsapp"></i> 0812-0000-0000</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center small mb-0">&copy; 2026 Dapur Manis &bull; Foto: Unsplash</p>
+        </div>
+    </footer>
+
+    <!-- Tantangan 3: tombol WhatsApp melayang -->
+    <a href="https://wa.me/6281200000000?text=Halo%2C%20saya%20mau%20pesan%20kue"
+       class="btn btn-success rounded-circle shadow position-fixed bottom-0 end-0 m-4 tombol-wa"
+       target="_blank" aria-label="Pesan via WhatsApp">
+        <i class="bi bi-whatsapp fs-3"></i>
+    </a>
+
+    <!-- 3) JavaScript Bootstrap: membuat komponen yang BERGERAK bisa bekerja
+         (tombol hamburger navbar, carousel, modal). Dipasang di akhir <body>
+         supaya halaman tampil dulu, baru script dijalankan. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

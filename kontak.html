@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!-- KUNCI GURU (umkm-p3): semua target wajib 1-3 + 3 tantangan sudah dikerjakan dengan data Dapur Manis. JANGAN dibagikan ke siswa. -->
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kontak - Dapur Manis</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+                <img src="assets/img/logo/logo-dapur-manis.png" alt="Logo Dapur Manis" width="40" height="40">
+                Dapur Manis
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-utama"
+                    aria-controls="menu-utama" aria-expanded="false" aria-label="Buka menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu-utama">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk Kami</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= JUDUL HALAMAN ================= -->
+    <section class="bg-tema text-white py-5">
+        <div class="container text-center">
+            <h1 class="fw-bold">Hubungi Kami</h1>
+            <p class="lead mb-0">Pesan lewat WhatsApp atau datang langsung ke dapur kami.</p>
+        </div>
+    </section>
+
+    <!-- ================= INFO KONTAK + PETA ================= -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Di laptop: info (5 bagian) di kiri, peta (7 bagian) di kanan. 5 + 7 = 12.
+                 Di HP: keduanya bertumpuk, info di atas, peta di bawah. -->
+            <div class="row g-4">
+
+                <!-- Kolom kiri: informasi kontak -->
+                <div class="col-lg-5">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">Dapur Manis</h5>
+
+                            <p class="mb-3">
+                                <i class="bi bi-geo-alt-fill me-2"></i>
+                                Jl. Contoh No. 12, Cibinong, Kabupaten Bogor
+                            </p>
+                            <p class="mb-4">
+                                <i class="bi bi-whatsapp me-2"></i>
+                                0812-0000-0000
+                            </p>
+
+                            <h6 class="fw-bold">Jam Buka</h6>
+                            <table class="table table-sm mb-4">
+                                <tbody>
+                                    <tr><td>Senin - Jumat</td><td class="text-end">08.00 - 17.00</td></tr>
+                                    <tr><td>Sabtu</td><td class="text-end">08.00 - 14.00</td></tr>
+                                    <tr><td>Minggu</td><td class="text-end">Tutup (pesanan via WA)</td></tr>
+                                </tbody>
+                            </table>
+
+                            <a href="https://wa.me/6281200000000?text=Halo%20Dapur%20Manis%2C%20saya%20mau%20bertanya"
+                               class="btn btn-success w-100" target="_blank">
+                                <i class="bi bi-whatsapp"></i> Chat via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom kanan: peta lokasi -->
+                <div class="col-lg-7">
+                    <div class="ratio ratio-4x3 rounded-3 overflow-hidden shadow-sm">
+                        <iframe src="https://maps.google.com/maps?q=Cibinong+Kabupaten+Bogor&z=15&output=embed"
+                                style="border:0;" allowfullscreen loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" title="Peta lokasi Dapur Manis"></iframe>
+                    </div>
+                </div>
+
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    <!-- ================= FORM KIRIM PESAN (BARU P3) ================= -->
+    <!-- P3 Target 2 (KUNCI): form -> WhatsApp, dengan validasi Bootstrap -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h2 class="h4 fw-bold mb-1">Kirim Pesan</h2>
+                            <p class="text-muted mb-4">Isi form di bawah. Pesanmu langsung diteruskan ke WhatsApp kami.</p>
+
+                            <!-- data-wa = nomor WhatsApp UMKM (62...), data-toko = nama toko di awal pesan.
+                                 novalidate: pemeriksaan isian diserahkan ke Bootstrap (pesan merah). -->
+                            <form id="form-kontak" data-wa="6281200000000" data-toko="Dapur Manis" novalidate>
+                                <div class="row g-3">
+
+                                    <!-- P3 Target 2 (KUNCI): ketiga kolom memakai required,
+                                         masing-masing diikuti <div class="invalid-feedback"> TEPAT di bawahnya -->
+                                    <div class="col-md-6">
+                                        <label for="nama" class="form-label">Nama</label>
+                                        <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama kamu" required>
+                                        <div class="invalid-feedback">Nama wajib diisi.</div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="keperluan" class="form-label">Keperluan</label>
+                                        <select class="form-select" id="keperluan" name="keperluan" required>
+                                            <option value="">-- Pilih keperluan --</option>
+                                            <option>Pesan kue kering</option>
+                                            <option>Pesan kue basah / bolu</option>
+                                            <option>Tanya hampers</option>
+                                            <option>Lainnya</option>
+                                        </select>
+                                        <div class="invalid-feedback">Pilih salah satu keperluan.</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="pesan" class="form-label">Pesan</label>
+                                        <textarea class="form-control" id="pesan" name="pesan" rows="4"
+                                                  placeholder="Contoh: Saya mau pesan 2 toples nastar untuk hari Sabtu."
+                                                  required minlength="10"></textarea>
+                                        <div class="invalid-feedback">Tulis pesanmu, minimal 10 huruf.</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-success btn-lg w-100">
+                                            <i class="bi bi-whatsapp"></i> Kirim via WhatsApp
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-tema text-white pt-4 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <h5 class="fw-bold">Dapur Manis</h5>
+                    <p class="mb-0"><i class="bi bi-geo-alt"></i> Jl. Contoh No. 12, Cibinong, Kabupaten Bogor</p>
+                </div>
+                <div class="col-md-6 mb-3 text-md-end">
+                    <p class="mb-0"><i class="bi bi-whatsapp"></i> 0812-0000-0000</p>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center small mb-0">&copy; 2026 Dapur Manis &bull; Foto: Unsplash</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Skrip form kontak (BARU P3, tidak diubah siswa): validasi Bootstrap + teruskan ke wa.me.
+         Di Tahap B diganti PHP (kontak.php); form-nya tetap dipakai. -->
+    <script>
+        var form_kontak = document.getElementById('form-kontak');
+
+        form_kontak.addEventListener('submit', function (event) {
+            event.preventDefault(); // jangan muat ulang halaman
+
+            // Ada kolom required yang masih kosong? Tampilkan pesan merah, lalu berhenti.
+            if (!form_kontak.checkValidity()) {
+                form_kontak.classList.add('was-validated');
+                return;
+            }
+
+            // Ambil isi setiap kolom
+            var nama = document.getElementById('nama').value.trim();
+            var keperluan = document.getElementById('keperluan').value;
+            var pesan = document.getElementById('pesan').value.trim();
+
+            // Susun menjadi satu pesan (\n = pindah baris)
+            var isi_pesan = 'Halo ' + form_kontak.dataset.toko + ', saya ' + nama + '.\n'
+                          + 'Keperluan: ' + keperluan + '\n\n'
+                          + pesan;
+
+            // Buka WhatsApp di tab baru
+            var link_wa = 'https://wa.me/' + form_kontak.dataset.wa + '?text=' + encodeURIComponent(isi_pesan);
+            window.open(link_wa, '_blank');
+        });
+    </script>
+</body>
+</html>

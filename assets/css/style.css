@@ -1,0 +1,60 @@
+/* =====================================================
+   style.css - CSS tambahan milik kita sendiri
+   Bootstrap sudah mengatur hampir semua tampilan.
+   File ini hanya untuk hal yang tidak ada di Bootstrap.
+   ===================================================== */
+
+/* ---------- HERO / BANNER ---------- */
+/* UBAH (Target b, opsional): ganti nama file banner dengan banner UMKM-mu.
+   Ingat: "../" artinya naik satu folder (dari css/ ke assets/), lalu masuk img/banner/ */
+.hero {
+    min-height: 60vh;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), /* lapisan gelap agar tulisan terbaca */
+        url("../img/banner/banner-kue.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---------- FOTO PRODUK ---------- */
+/* Semua foto produk dibuat persegi (1:1) dan dipotong rapi,
+   supaya tinggi card sama walaupun ukuran fotonya berbeda. */
+.foto-produk {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* ---------- WARNA TEMA (Target tantangan) ---------- */
+/* UBAH (Tantangan 1): hapus tanda komentar di bawah, lalu ganti kodenya
+   dengan warna yang cocok untuk UMKM-mu. Cari kode warna di: coolors.co
+   Pakai class-nya di HTML, misalnya: <footer class="bg-tema text-white ...">  */
+
+:root {
+    --warna-utama: #7a4a2b;
+    --warna-kedua: #f7e9d6;
+}
+
+.bg-tema {
+    background-color: var(--warna-utama) !important;
+}
+
+.btn-tema {
+    background-color: var(--warna-utama);
+    border-color: var(--warna-utama);
+    color: #fff;
+}
+
+.btn-tema:hover {
+    filter: brightness(0.9);
+    color: #fff;
+}
+
+/* Tantangan 3: tombol WhatsApp melayang */
+.tombol-wa {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
