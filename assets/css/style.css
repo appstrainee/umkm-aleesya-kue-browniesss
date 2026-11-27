@@ -58,15 +58,3 @@
     justify-content: center;
     z-index: 1050;
 }
-
-.slide-carousel {
-    min-height: 60vh;
-}
-
-.hero-2 {
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url("../img/banner/banner-promo.jpg");
-    background-size: cover;
-    background-position: center;
-}
