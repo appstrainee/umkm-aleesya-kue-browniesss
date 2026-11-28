@@ -21,8 +21,6 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
     />
-
-    <!-- 2) CSS milik kita sendiri. Dipasang SETELAH Bootstrap agar bisa menimpa gaya Bootstrap -->
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
   <body>
@@ -80,12 +78,82 @@
       </div>
     </nav>
 
-    <!-- ================= Carousel PROMO (P3) ================= -->
-    <section
-      id="promo"
-      class="carousel slide carousel-fade"
-      data-bs-ride="carousel"
-    ></section>
+    <!-- ================= CAROUSEL (LATIHAN MISI) ================= -->
+    <!-- Blok ini MENGGANTIKAN <section class="hero ..."> ... </section> yang lama.
+         MISI 6: tambahkan atribut data-bs-interval="3000".
+         MISI 7: tambahkan class "carousel-fade" setelah "slide". -->
+    <section id="promo" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#promo"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#promo"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <!-- ============ SLIDE 1 ============ -->
+        <div class="carousel-item active">
+          <div class="hero slide-carousel d-flex align-items-center text-white">
+            <div class="container text-center py-5">
+              <h1 class="display-4 fw-bold">Dapur Manis</h1>
+              <p class="lead mb-4">
+                Kue rumahan, dibuat setiap hari dengan sepenuh hati
+              </p>
+              <a href="#produk" class="btn btn-light btn-lg">Lihat Produk</a>
+            </div>
+          </div>
+        </div>
+        <!-- ============ AKHIR SLIDE 1 ============ -->
+        <!-- ============ SLIDE 2 ============ -->
+        <div class="carousel-item">
+          <div
+            class="bg-tema slide-carousel d-flex align-items-center text-white"
+          >
+            <div class="container text-center py-5">
+              <h2 class="display-5 fw-bold">Gratis Ongkir Se-Cibinong</h2>
+              <p class="lead mb-4">Untuk Pembelian minimal Rp. 150.000</p>
+              <a href="#Kontak" class="btn btn-light btn-lg">Pesan Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <!-- ============ AKHIR SLIDE 2 ============ -->
+
+        <!-- MISI 8 (TANTANGAN): SLIDE 3 bergambar
+                   Salin slide 1 lagi, hapus "active", ganti class "hero" menjadi "hero-2", ubah isinya.
+                   Jangan lupa tambah indikator ketiga (data-bs-slide-to="2"). -->
+      </div>
+      <!-- /.carousel-inner -->
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#promo"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sebelumnya</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#promo"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Berikutnya</span>
+      </button>
+    </section>
+    <!-- ================= AKHIR CAROUSEL ================= -->
 
     <!-- ================= PRODUK UNGGULAN ================= -->
     <section id="produk" class="py-5">

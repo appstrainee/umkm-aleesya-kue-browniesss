@@ -8,20 +8,19 @@
 /* UBAH (Target b, opsional): ganti nama file banner dengan banner UMKM-mu.
    Ingat: "../" artinya naik satu folder (dari css/ ke assets/), lalu masuk img/banner/ */
 .hero {
-    min-height: 60vh;
-    background-image:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), /* lapisan gelap agar tulisan terbaca */
-        url("../img/banner/banner-kue.jpg");
-    background-size: cover;
-    background-position: center;
+  min-height: 60vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    /* lapisan gelap agar tulisan terbaca */ url("../img/banner/banner-kue.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /* ---------- FOTO PRODUK ---------- */
 /* Semua foto produk dibuat persegi (1:1) dan dipotong rapi,
    supaya tinggi card sama walaupun ukuran fotonya berbeda. */
 .foto-produk {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 
 /* ---------- WARNA TEMA (Target tantangan) ---------- */
@@ -30,31 +29,48 @@
    Pakai class-nya di HTML, misalnya: <footer class="bg-tema text-white ...">  */
 
 :root {
-    --warna-utama: #7a4a2b;
-    --warna-kedua: #f7e9d6;
+  --warna-utama: #7a4a2b;
+  --warna-kedua: #f7e9d6;
 }
 
 .bg-tema {
-    background-color: var(--warna-utama) !important;
+  background-color: var(--warna-utama) !important;
 }
 
 .btn-tema {
-    background-color: var(--warna-utama);
-    border-color: var(--warna-utama);
-    color: #fff;
+  background-color: var(--warna-utama);
+  border-color: var(--warna-utama);
+  color: #fff;
 }
 
 .btn-tema:hover {
-    filter: brightness(0.9);
-    color: #fff;
+  filter: brightness(0.9);
+  color: #fff;
 }
 
 /* Tantangan 3: tombol WhatsApp melayang */
 .tombol-wa {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1050;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+/* ---------- LATIHAN MISI CAROUSEL ---------- */
+/* Tempel di PALING BAWAH style.css milikmu. */
+
+/* Semua slide setinggi 60% layar, supaya carousel tidak naik-turun saat slide berganti */
+.slide-carousel {
+  min-height: 60vh;
+}
+
+/* MISI 8 (tantangan): gambar banner kedua untuk slide 3.
+   Ganti nama file dengan banner keduamu (rasio lebar, tanpa teks). */
+.hero-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("../img/banner/banner-promo.jpg");
+  background-size: cover;
+  background-position: center;
 }
